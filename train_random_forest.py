@@ -88,7 +88,7 @@ def create_feature_label_dataset(data, window_size=6, overlap=0.5):
 
 # --- Main pipeline ---
 if __name__ == '__main__':
-    file_path = 'dataset.csv'
+    file_path = 'dataset/fall_dataset.csv'
     data = load_and_preprocess_data(file_path)
 
     print(f"[INFO] Raw samples after cleaning: {len(data)}")
@@ -118,6 +118,6 @@ if __name__ == '__main__':
     print(confusion_matrix(y_test, y_pred))
 
 
-    joblib.dump(clf, 'fall_detection_model.pkl')
-    joblib.dump(scaler, 'scaler.pkl')
+    joblib.dump(clf, 'models/fall_detection_model.pkl')
+    joblib.dump(scaler, 'models/scaler.pkl')
     print("✅ Model and scaler saved as 'fall_detection_model.pkl' and 'scaler.pkl'.")
