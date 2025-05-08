@@ -34,5 +34,5 @@ y_pred = model.predict(X_test)
 print("Classification Report:\n", classification_report(y_test, y_pred))
 
 # Save model and scaler
-joblib.dump(scaler, 'models/scaler_xgb.pkl')
-joblib.dump(model, 'models/fall_model_xgb.pkl')
+joblib.dump(scaler, 'scaler_xgb.pkl')
+joblib.dump(model, 'fall_model_xgb.pkl')

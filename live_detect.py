@@ -4,9 +4,10 @@ import numpy as np
 import joblib
 from scipy.stats import skew, kurtosis
 
+
 # Load scaler and model
-scaler = joblib.load('scaler.pkl')
-model = joblib.load('fall_detection_model.pkl')
+scaler = joblib.load('models/scaler.pkl')
+model = joblib.load('models/fall_detection_model.pkl')
 
 # Setup serial
 ser = serial.Serial('/dev/cu.usbserial-FTB6SPL3', 115200)
@@ -55,16 +56,16 @@ while True:
             sample = [ax, ay, az, gx, gy, gz]
             window.append(sample)
 
-            if len(window) == 6:
+            if len(window) == 6 :
                 features = extract_features(window)
                 features_scaled = scaler.transform(features)
                 prediction = model.predict(features_scaled)[0]
 
                 label = "FALL DETECTED 🚨" if prediction == 1 else "No Fall"
                 print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Prediction: {label}")
-
+                print(f"AX: {ax}, AY: {ay}, AZ: {az}, GX: {gx}, GY: {gy}, GZ: {gz}")
                 # Slide window (50% overlap = remove first 3 samples)
-                window = window[3:]
+                window = window[1:]
 
         except Exception as e:
             pass  # ignore errors silently
