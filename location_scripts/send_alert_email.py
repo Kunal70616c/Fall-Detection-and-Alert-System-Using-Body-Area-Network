@@ -4,7 +4,8 @@ import os
 from dotenv import load_dotenv
 from email.message import EmailMessage
 from email.utils import formataddr
-from get_nearby_hospitals import get_nearby_hospitals  # Ensure this file is available
+from get_nearby_hospitals import get_nearby_hospitals
+
 
 # Load environment variables
 load_dotenv()
