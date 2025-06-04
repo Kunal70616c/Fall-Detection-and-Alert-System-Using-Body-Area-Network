@@ -1,6 +1,8 @@
-Flask
+requests
+flask
 gunicorn
 numpy
-requests
-joblib
 scipy
+scikit-learn
+joblib
+python-dotenv
