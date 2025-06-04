@@ -211,8 +211,26 @@ Returns: Current sensor readings and health metrics
 #### Fall Detection Endpoint
 ```
 POST /api/fall-detection
-Body: Sensor data array
-Returns: Fall detection result (true/false)
+Body: Sensor data array (accelerometer, heart rate, temperature)
+```
+
+**Response Format:**
+```json
+// When fall is detected
+{
+    "status": "success",
+    "fall_detected": true,
+    "location": {
+        "latitude": 22.5726,
+        "longitude": 88.3639
+    }
+}
+
+// When no fall is detected
+{
+    "status": "success",
+    "fall_detected": false
+}
 ```
 
 #### Alert System Endpoint
@@ -274,7 +292,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email [your-email@example.com] or create an issue in this repository.
+For support, email kunal.cs.dev@outlook.com or create an issue in this repository.
 
 ---
 
