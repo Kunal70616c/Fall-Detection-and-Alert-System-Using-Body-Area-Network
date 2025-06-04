@@ -281,7 +281,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Kunal** - [Kunal70616c](https://github.com/Kunal70616c)
+**Kunal Pal** - [Kunal70616c](https://github.com/Kunal70616c)
+**Indranil Kundu** - [Orton1269](https://github.com/Orton1269)
 
 ## 🙏 Acknowledgments
 
