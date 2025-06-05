@@ -11,5 +11,5 @@ if __name__ == "__main__":
         fall_detected=True,
         latitude=22.5678,
         longitude=88.4154,
-        user_name="Test Subject 1"
+        user_name="AKCSIT"
     )
