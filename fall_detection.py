@@ -14,9 +14,9 @@ CHANNEL_ID_SENSOR = '2979884'
 CHANNEL_ID_GPS = '2979886'
 
 # User and location details
-USER_NAME = "Test Subject 1"
-DEFAULT_LATITUDE = 22.5906
-DEFAULT_LONGITUDE = 88.2644
+USER_NAME = "Kunal Pal"
+DEFAULT_LATITUDE = 22.61569
+DEFAULT_LONGITUDE = 88.43333
 
 def fetch_latest_samples(n=6):
     url = f"https://api.thingspeak.com/channels/{CHANNEL_ID_SENSOR}/feeds.json"
